@@ -1,0 +1,91 @@
+h1{
+	font-size: 20pt;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-transform: uppercase;
+}
+
+h2{
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+article li{
+	list-style-type: square;
+}
+
+img{
+	width: 100%;
+	padding: 3px;
+	border: 1px solid gray;
+}
+
+/*oldalszerkezet kialakiítása*/
+
+header, nav, aside, article, footer{
+	border:1px solid gray;
+	padding: 10px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+main{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+		"h h h h"
+		"n n n n"
+		"as ar ar ar"
+		"f f f f";
+		
+	grid-gap:10px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+header{
+	grid-area: h;
+}
+
+nav{
+	grid-area: n;
+}
+
+aside{
+	grid-area: as;
+}
+
+article{
+	grid-area: ar;
+}
+
+footer{
+	grid-area: f;
+}
+
+/*menü kialakítása*/
+
+nav ul{
+	padding-left:0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2px;
+}
+
+nav li{
+	list-style-type: none;
+}
+
+nav a{
+	text-decoration: none;
+	background-color: bisque;
+	display: block;
+	text-align: center;
+	border-radius: 10px;
+}
+
+nav a:hover{
+	background-color: green;
+	color: bisque;
+}
